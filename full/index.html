@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="CSS/index.css">
+		<script src="JS/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<script src="JS/indexExt.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="header">
+			<span class="normalText">
+				Hola,
+			</span>
+			<span id="bigText">
+				Usuario
+			</span>
+		</div>
+		<form>
+			<div id="transparentDiv">
+			</div>
+			<table id="tblParameters">
+				<tr>
+					<td colspan="2">
+						<h3>
+							Tama&ntilde;o
+						</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label class="normalText">Cantidad de filas</label>
+						<input type="text" id="rowQuantity" class="quantity" value="14">
+					</td>
+					<td>
+						<label class="normalText">Cantidad de columnas</label>
+						<input type="text" id="columnQuantity" class="quantity" value="15">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<h3>
+							Colores
+						</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label class="normalText">Color tabla</label>
+						<select id="cellsColor" onchange="updateCellsColor()">
+							<option value="blue">Azul</option>
+							<option value="cyan">Azul claro</option>
+							<option value="black" selected="selected">Negro</option>
+							<option value="green">Verde</option>
+							<option value="gray">Gris</option>
+							<option value="red">Rojo</option>
+							<option value="orange">Naranja</option>
+							<option value="aliceblue">aliceblue</option>
+							<option value="antiquewhite">Blanco viejo</option>
+							<option value="blueviolet">Morado</option>
+							<option value="white">Blanco</option>
+						</select>
+					</td>
+					<td>
+						<label class="normalText">Color bordes</label>
+						<select id="bordersColor" onchange="updateBordersColor()">
+							<option value="blue">Azul</option>
+							<option value="cyan">Azul claro</option>
+							<option value="black">Negro</option>
+							<option value="green">Verde</option>
+							<option value="gray">Gris</option>
+							<option value="red">Rojo</option>
+							<option value="orange">Naranja</option>
+							<option value="aliceblue">aliceblue</option>
+							<option value="antiquewhite">Blanco viejo</option>
+							<option value="blueviolet">Morado</option>
+							<option value="white" selected="selected">Blanco</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label class="normalText">Color texto</label>
+						<select id="textColor" onchange="updateTextColor()">
+							<option value="blue">Azul</option>
+							<option value="cyan">Azul claro</option>
+							<option value="black">Negro</option>
+							<option value="green">Verde</option>
+							<option value="gray">Gris</option>
+							<option value="red">Rojo</option>
+							<option value="orange">Naranja</option>
+							<option value="aliceblue">aliceblue</option>
+							<option value="antiquewhite">Blanco viejo</option>
+							<option value="blueviolet">Morado</option>
+							<option value="white" selected="selected">Blanco</option>
+						</select>
+					</td>
+					<td>
+						<label class="normalText">Color seleccionadas</label>
+						<select id="selectedCellColor">
+							<option value="blue">Azul</option>
+							<option value="cyan">Azul claro</option>
+							<option value="black">Negro</option>
+							<option value="green">Verde</option>
+							<option value="gray">Gris</option>
+							<option value="red">Rojo</option>
+							<option value="orange" selected="selected">Naranja</option>
+							<option value="aliceblue">aliceblue</option>
+							<option value="antiquewhite">Blanco viejo</option>
+							<option value="blueviolet">Morado</option>
+							<option value="white">Blanco</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div id="updateTblBtn">
+							<input type="button" value="Generar tabla" onClick="createTable()">
+							<!--<img src="imgs/a.jpg" onClick="createTable()"></img>-->
+						</div>
+					</td>
+				</tr>
+			</table>
+			<!--</div>-->
+		</form>
+		<div id="mainEvent">
+		</div>
+	</body>
+</html>
